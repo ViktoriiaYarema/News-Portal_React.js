@@ -1,0 +1,11 @@
+.Logo {
+    a{
+        font-family: "ProximaNova-Bold";
+        font-size: 25px;
+        text-decoration: none;
+        color: var(--text-color);
+        &:hover{
+            color: var(--detain-color);
+        }
+    }
+}

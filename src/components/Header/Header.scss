@@ -1,0 +1,9 @@
+.Header{
+    width: 100%;
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 45px 0;
+    background-color: #fff;
+}

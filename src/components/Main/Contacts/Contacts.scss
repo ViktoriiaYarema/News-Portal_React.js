@@ -1,0 +1,109 @@
+.Contacts{
+    padding-top: 90px;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__phone a{
+        font-size: 60px;
+        color: var(--detain-color);
+        text-decoration: none;
+    }
+    &__name{
+        margin-top: 50px;
+        padding-left: 25px;
+        font-size: 25px;
+        border-left: 2px solid var(--detain-color);
+    }
+    &__mail {
+        margin-top: 25px;
+        a{
+            text-decoration: none;        
+            font-size: 20px;
+            &:hover{
+                color: var(--detain-color);
+            }
+        }
+    }
+    &__skills{
+        margin-top: 52px;
+        p:nth-child(1){
+            opacity: 0.5;
+            font-size: 20px;
+        }
+        p:nth-child(2){
+            margin-top: 25px;
+            font-size: 20px;
+            span{
+                color: var(--detain-color); 
+            }
+        }
+    }
+    &__img{
+        width: 540px;
+        max-height: 440px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+        }
+    }
+}
+
+@media (max-width : 992px) {
+    .Contacts{
+        padding-top: 36px;
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__phone a{
+            grid-column: 1/3;
+            font-size: 25px;
+        }
+        &__info{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+        }
+        &__name{
+            justify-self: center;
+            margin-top: 25px;
+            padding-left: 18px;
+            font-size: 18px;
+            border-left: 2px solid var(--detain-color);
+        }
+        &__mail {
+            margin-top: 15px;
+            a{
+                text-decoration: none;        
+                font-size: 16px;
+                &:hover{
+                    color: var(--detain-color);
+                }
+            }
+        }
+        &__skills{
+            justify-self: center;
+            margin-top: 0.5em;
+            p:nth-child(1){
+                opacity: 0.5;
+                font-size: 0.8em;
+            }
+            p:nth-child(2){
+                margin-top: 0.5em;
+                font-size: 0.8em;
+            }
+        }
+        &__img{
+            margin-top: 25px;
+            width: 100%;
+            height: 340px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+  

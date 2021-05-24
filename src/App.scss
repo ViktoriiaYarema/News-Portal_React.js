@@ -1,0 +1,47 @@
+@import 'styles/fonts.scss';
+@import 'styles/vars.scss';
+
+* {
+  font-family: 'ProximaNova-Regular';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+.App{
+  position: relative;
+  max-width: 1140px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.Main{
+  padding-top: 120px;
+}
+.MainTitle{
+  &__title{
+    font-size: 60px;
+    font-family: 'ProximaNova-Regular';
+    font-weight: normal;
+    span{
+      color: var(--detain-color);
+    }
+  }
+}
+.AllNews{
+  padding: 90px 0;
+}
+@media (max-width : 768px) {
+  .MainTitle{
+    &__title{
+      font-size: 32px;
+    }
+  }
+  .AllNews{
+    padding: 36px 0;
+  }
+}
+
+
+
+

@@ -1,0 +1,30 @@
+.FreshNews{
+    padding: 90px 0; 
+    &__all-news-link{
+        margin-top: 60px;
+        font-size: 20px;
+        text-decoration: none;
+        color: var(--detain-color);
+    }   
+}
+.container-news {
+    margin-top: 75px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width : 1200px) {
+    .container-news {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width : 768px) {
+    .FreshNews{
+        padding: 36px 0; 
+    }
+    .container-news {
+        margin-top: 36px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
