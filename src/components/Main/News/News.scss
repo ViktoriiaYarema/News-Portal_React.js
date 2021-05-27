@@ -1,4 +1,4 @@
-.FreshNews{
+.News{
     padding: 90px 0; 
     &__all-news-link{
         margin-top: 60px;
@@ -20,7 +20,7 @@
 }
 
 @media (max-width : 768px) {
-    .FreshNews{
+    .News{
         padding: 36px 0; 
     }
     .container-news {

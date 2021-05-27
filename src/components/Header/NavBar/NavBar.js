@@ -8,7 +8,7 @@ function NavBar() {
         <nav>
           <ul>
            <li><NavLink exact to= '/'>Главная</NavLink></li>
-           <li><NavLink exact to= '/AllNews'>Новости</NavLink></li>
+           <li><NavLink exact to= '/News'>Новости</NavLink></li>
            <li><NavLink exact to= '/Contacts'>Контакты</NavLink></li>
           </ul>
         </nav>

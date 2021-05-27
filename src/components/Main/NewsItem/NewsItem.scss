@@ -22,7 +22,7 @@
     }
     &__scr{
         font-size: 20px;
-        opacity: 0.5;
+        color: lighten(#333D51, 50%);
     }
     &__date{
         display: flex;
@@ -34,7 +34,7 @@
             font-size: 30px;
         }
         p:nth-child(2){
-            opacity: 0.5;
+            color: lighten(#333D51, 50%);
             font-size: 20px;
         }
     }
