@@ -40,7 +40,7 @@ const Main = () => {
           render = {(props) => 
             <News {...props}  
               response = {result} 
-              amountNewsItems = {0}
+              amountNewsItems = {18}
               titleFirst = {'Быть'}
               titleSecond = {'в курсе'}
               titleMark = {'событий'}

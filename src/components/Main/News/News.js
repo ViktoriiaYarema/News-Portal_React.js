@@ -18,39 +18,26 @@ const News = props => {
             <h1 className = "MainTitle__title">{props.titleFirst}<pre></pre>{props.titleSecond} <span>{props.titleMark}</span></h1>
             <div className="container-news">  
             { 
-                props.response && props.response.map((item,index) => {
-                    if(props.amountNewsItems === 6) {
-                        if(index < props.amountNewsItems) {                        
-                            return ( 
-                                <NewsItem 
-                                    key = {index}
-                                    title = {item.title}
-                                    src ={item.source.name}
-                                    day = {optomizationDate(item.publishedAt).getDate()}
-                                    month = {optomizationDate(item.publishedAt).getMonth() +1}
-                                    name = {item.source.name}
-                                    content = {item.content}
-                                    img = {item.urlToImage}>
-                                </NewsItem>
-                            )
-                        } 
-                    } else {
-                        return ( 
-                            <NewsItem 
-                                key = {index}
-                                title = {item.title}
-                                src ={item.source.name}
-                                day = {optomizationDate(item.publishedAt).getDate()}
-                                month = {optomizationDate(item.publishedAt).getMonth() +1}
-                                name = {item.source.name}
-                                content = {item.content}
-                                img = {item.urlToImage}
-                            />
-                        )
-                    }
-                    
+                props.response && props.response.filter((item,index) => {
+                    return props.amountNewsItems > index
+                }) 
+                .map((item,index) => {                       
+                    return ( 
+                        <NewsItem 
+                            key = {index}
+                            title = {item.title}
+                            src ={item.source.name}
+                            day = {optomizationDate(item.publishedAt).getDate()}
+                            month = {optomizationDate(item.publishedAt).getMonth() + 1}
+                            name = {item.source.name}
+                            content = {item.content}
+                            img = {item.urlToImage}>
+                        </NewsItem>
+                        
+                    )                                           
                 })                
             }
+
             {
                 props.amountNewsItems === 6 ?  ( <Link to = "/News" className = "News__all-news-link">Быть в курсе событий</Link>) : null
             }         
